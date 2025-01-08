@@ -1,5 +1,29 @@
 # gpu_occupancy_monitor
-Monitor GPU usage, occupy it when usage is below the threshold.监视gpu使用率，低于阈值就占满，防止kill
+Monitor GPU usage, occupy it when usage is below the threshold.
+
+监视gpu使用率，低于阈值就占满，防止被kill
+
+### 描述
+
+占卡脚本，监控 GPU 利用率，并在 GPU 利用率低于指定阈值时计算，防止利用率不足被kill。
+
+
+### 环境需求
+- Python 3.x
+- NVIDIA GPU 和驱动
+- PyTorch
+- `nvidia-ml-py3` 库（安装命令：`pip install nvidia-ml-py3`）
+
+
+### 使用方法
+1. 安装所需库：
+   ```bash
+   pip install torch nvidia-ml-py3
+   ```
+2. 运行脚本：
+   nohup python3 fuck_gpu.py
+
+---
 
 ### Description
 
@@ -32,24 +56,4 @@ A script for occupying GPUs: Monitors GPU utilization and performs computations 
 2. Run the script:
    nohup python3 fuck_gpu.py
 
----
 
-### 描述
-
-占卡脚本，监控 GPU 利用率，并在 GPU 利用率低于指定阈值时计算，防止利用率不足被kill。
-
-
-### 环境需求
-- Python 3.x
-- NVIDIA GPU 和驱动
-- PyTorch
-- `nvidia-ml-py3` 库（安装命令：`pip install nvidia-ml-py3`）
-
-
-### 使用方法
-1. 安装所需库：
-   ```bash
-   pip install torch nvidia-ml-py3
-   ```
-2. 运行脚本：
-   nohup python3 fuck_gpu.py
